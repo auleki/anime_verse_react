@@ -1,7 +1,16 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  border: 0;
-  -webkit-tap-highlight-color: transparent;
+@import './variables';
+
+.app__container {
+  background-color: $gray ;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.anime__listing {
+  background-color: yellow;
+}
+
+.sidebar { 
+  background-color: $black;
 }
