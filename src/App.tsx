@@ -1,9 +1,12 @@
-import React from 'react';
-import './App.css';
+import './assets/scss/main.css'
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <h1>ANIME VERSE</h1>
+    <div className="app__container">
+      <Sidebar />
+      <h1>ANIME VERSE</h1>
+    </div>
   );
 }
 
