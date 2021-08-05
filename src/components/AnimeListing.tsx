@@ -19,7 +19,7 @@ const AnimeListing = (props: any) => {
       <div className="listings">
         {props.animeListing.length === 0 &&  (
           <div className="empty__list">
-            <h2>LIST EMPTY</h2>
+            <h2>NONE FOUND</h2>
             <p>Search for an anime</p>
           </div>
     )}
