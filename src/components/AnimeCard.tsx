@@ -1,5 +1,5 @@
 const AnimeCard = (props: any) => {
-  console.log('ANIME =>', props);
+  // console.log('ANIME =>', props);
   return (
     <a 
       href={props.anime.url} 

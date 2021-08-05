@@ -154,10 +154,8 @@ a {
 
 .sidebar { 
   background-color: $white;
-  top: 0;
-  padding-bottom: 2rem;
-  left: 0;
-  border-right: 2px solid $gray;
+  top: 0; 
+  left: 0;  
   .title__section {
     text-align: center;
     padding: 2rem 0;
@@ -166,8 +164,7 @@ a {
     }
   }
   .top__list-section {
-    
-    margin: 2rem;
+    margin: 2rem 2rem 4rem 2rem;
    .top__list {
     // text-align: center;
     margin-bottom: 2rem;
@@ -184,6 +181,9 @@ a {
     border-radius: 20px 2px 30px 4px;
     box-shadow: 4px 4px 9px rgb(80 80 80 / 15%), -4px -4px 9px rgb(95 95 95 / 16%);
     transition: background 200ms ease-in;
+    &:nth-child(2) {
+      margin-bottom: 2rem;
+    }
     &:hover {
       background: darken($white, 15%);
     }
@@ -226,4 +226,12 @@ a {
       font-weight: 200;
     }
   }
+}
+
+.footer {
+  padding: 3rem 1rem; 
+  background-color: $gray;
+  color: $black;
+  margin-top: 2rem;
+  text-align: center;
 }

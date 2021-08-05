@@ -149,9 +149,7 @@ a {
 .sidebar {
   background-color: #ffffff;
   top: 0;
-  padding-bottom: 2rem;
   left: 0;
-  border-right: 2px solid #ddd;
 }
 .sidebar .title__section {
   text-align: center;
@@ -161,7 +159,7 @@ a {
   font-weight: normal;
 }
 .sidebar .top__list-section {
-  margin: 2rem;
+  margin: 2rem 2rem 4rem 2rem;
 }
 .sidebar .top__list-section .top__list {
   margin-bottom: 2rem;
@@ -177,6 +175,9 @@ a {
   border-radius: 20px 2px 30px 4px;
   box-shadow: 4px 4px 9px rgba(80, 80, 80, 0.15), -4px -4px 9px rgba(95, 95, 95, 0.16);
   transition: background 200ms ease-in;
+}
+.sidebar .top__list-section .top__list:nth-child(2) {
+  margin-bottom: 2rem;
 }
 .sidebar .top__list-section .top__list:hover {
   background: #d9d9d9;
@@ -214,4 +215,12 @@ a {
 }
 .header .title span {
   font-weight: 200;
+}
+
+.footer {
+  padding: 3rem 1rem;
+  background-color: #ddd;
+  color: #1a1a1a;
+  margin-top: 2rem;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

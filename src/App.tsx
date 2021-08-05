@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './assets/scss/main.css'
 import Sidebar from './components/Sidebar';
 import AnimeListing from './components/AnimeListing';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import axios from 'axios';
 
@@ -49,6 +50,7 @@ function App() {
           query={query} 
           findAnime={FindAnime}/>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 }
