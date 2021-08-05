@@ -3,14 +3,138 @@
 .app__container {
   background-color: $gray ;
   min-height: 100vh;
+  font-family: $main-font, sans-serif;
+}
+
+.container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 30% 70%;
+}
+
+.page {
+  height: 100vh;
+}
+
+.search__area {
+  border-radius: 55px;
+  padding: 30px;
+  // background: #f5f5f5;
+  border: 5px solid #f5f5f5;
+  display: inline-flex;
+  align-items: center;
+  margin: 2rem 0;
+
+  transition: box-shadow 200ms ease-in;
+
+  &:hover {
+    box-shadow: none;
+  }
+  .icon {
+    width: 55px;
+    cursor: pointer;
+  }
+
+  .mic__icon {
+    width: 0;
+    transition: 150ms ease-in;
+  }
+  
+  .search {
+    font-size: 20px;
+    width: 0;
+    transition: 300ms ease-in-out;
+    border: 0;
+    color: $black;
+    background: transparent;
+    outline: none;
+    &:placeholder {
+      color: $gray;
+    }
+  }
+  &.active {
+    box-shadow: 4px 4px 9px rgba(80, 80, 80, 0.151),
+    -4px -4px 9px rgba(95, 95, 95, 0.164);
+    border-color: transparent;
+    .search {
+      width: 500px;
+      padding: 1rem;
+    }
+    .mic__icon {
+      width: 55px;
+    }
+  }
 }
 
 .anime__listing {
-  background-color: yellow;
+  background-color: $white;
+  padding: 2rem;
+  .title__section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .listings {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .anime__card {
+    background: $white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+    flex: 1 1 10rem;
+    padding: 1rem;
+  }
 }
 
 .sidebar { 
-  background-color: $black;
+  background-color: $white;
+  border-right: 2px solid $gray;
+  .title__section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .top__list-section {
+    
+    margin: 2rem;
+   .top__list {
+    // text-align: center;
+    margin-bottom: 2rem;
+    background: $black;
+    color: $gray;
+    text-decoration: none;
+    font-size: 16px;
+    gap: 16px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    width: 100%;
+    border-radius: 20px 2px 30px 4px;
+    transition: background 200ms ease-in;
+    &:hover {
+      background: lighten($black, 15%);
+    }
+    img {
+      height: 75px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid $gray;
+      width: 75px;
+    }
+   } 
+  }
+  
+}
+
+
+.header {
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  .title {
+    span {
+      font-weight: 200;
+    }
+  }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,17 +7,135 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* COLORS  */
+/* TYPOGRAPHY  */
+/*   */
+/*   */
+/*   */
+/*   */
 .app__container {
   background-color: #ddd;
   min-height: 100vh;
+  font-family: "M PLUS 1", sans-serif;
+}
+
+.container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 30% 70%;
+}
+
+.page {
+  height: 100vh;
+}
+
+.search__area {
+  border-radius: 55px;
+  padding: 30px;
+  border: 5px solid #f5f5f5;
+  display: inline-flex;
+  align-items: center;
+  margin: 2rem 0;
+  transition: box-shadow 200ms ease-in;
+}
+.search__area:hover {
+  box-shadow: none;
+}
+.search__area .icon {
+  width: 55px;
+  cursor: pointer;
+}
+.search__area .mic__icon {
+  width: 0;
+  transition: 150ms ease-in;
+}
+.search__area .search {
+  font-size: 20px;
+  width: 0;
+  transition: 300ms ease-in-out;
+  border: 0;
+  color: #1a1a1a;
+  background: transparent;
+  outline: none;
+}
+.search__area .search:placeholder {
+  color: #ddd;
+}
+.search__area.active {
+  box-shadow: 4px 4px 9px rgba(80, 80, 80, 0.151), -4px -4px 9px rgba(95, 95, 95, 0.164);
+  border-color: transparent;
+}
+.search__area.active .search {
+  width: 500px;
+  padding: 1rem;
+}
+.search__area.active .mic__icon {
+  width: 55px;
 }
 
 .anime__listing {
-  background-color: yellow;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+.anime__listing .title__section {
+  text-align: center;
+  padding: 2rem 0;
+}
+.anime__listing .listings {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.anime__listing .anime__card {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  flex: 1 1 10rem;
+  padding: 1rem;
 }
 
 .sidebar {
-  background-color: #1a1a1a;
+  background-color: #ffffff;
+  border-right: 2px solid #ddd;
+}
+.sidebar .title__section {
+  text-align: center;
+  padding: 2rem 0;
+}
+.sidebar .top__list-section {
+  margin: 2rem;
+}
+.sidebar .top__list-section .top__list {
+  margin-bottom: 2rem;
+  background: #1a1a1a;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 16px;
+  gap: 16px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px 2px 30px 4px;
+  transition: background 200ms ease-in;
+}
+.sidebar .top__list-section .top__list:hover {
+  background: #404040;
+}
+.sidebar .top__list-section .top__list img {
+  height: 75px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px solid #ddd;
+  width: 75px;
+}
+
+.header {
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+.header .title span {
+  font-weight: 200;
 }/*# sourceMappingURL=main.css.map */

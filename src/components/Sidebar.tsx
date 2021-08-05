@@ -1,8 +1,14 @@
-// import React from 'react'
-const Sidebar = () => {
+import AnimeCard from "./AnimeCard";
+import TopAnime from "./TopAnime";
+const Sidebar = (props: any) => {
   return (
-    <div className="sidebar">
-      <h1>Sidebar</h1>
+    <div className="sidebar page">
+      <div className="title__section">
+        <h1>Top 5 Anime</h1>
+      </div>
+      <div className="top__list-section">
+        {props.topAnimes.map((anime: any) => <TopAnime anime={anime} />)}
+      </div>
     </div>
   )
 }
