@@ -2,13 +2,20 @@
 
 .app__container {
   background-color: $gray ;
-  min-height: 100vh;
+  height: 100vh;
   font-family: $main-font, sans-serif;
+  // overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 75%;
+  // overflow-y: hidden;
 }
 
 .page {
@@ -68,29 +75,95 @@
 .anime__listing {
   background-color: $white;
   padding: 2rem;
+  // overflow-y: scroll;
+
   .title__section {
     text-align: center;
     padding: 2rem 0;
+    h1 {
+      font-weight: normal;
+    }
   }
   .listings {
-    display: flex;
+    display: grid;
     gap: 1rem;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 2fr);
   }
   .anime__card {
     background: $white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
     flex: 1 1 10rem;
+    overflow: hidden;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    &:hover {
+      .info {
+        transform: translateX(0);
+      }
+    }
+    .info {
+      height: 100%;
+      padding: 1rem;
+      border-radius: 5px;
+      position: absolute;
+      top: 0%;
+      // right: 0;
+      left: 0;
+      bottom: 0;
+      transition: transform 200ms ease-in-out;
+      background: $black;
+      transform: translateX(120%);
+      color: $white;
+      section {
+        margin-bottom: 1rem;
+      }
+      .sub__title {
+        color:$gray;
+        border-left: 2px solid red;
+        padding-left: .5rem;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: .5rem;
+      }
+      p {
+        // padding-left: .5rem;
+      }
+    }
+    .anime__image {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+    .anime__title {
+      font-weight: 400;
+      border-left: 3px solid red;
+      // padding-left: .3rem;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      padding: .3rem 0 .3rem .3rem;
+    }
+
   }
 }
 
 .sidebar { 
   background-color: $white;
+  top: 0;
+  padding-bottom: 2rem;
+  left: 0;
   border-right: 2px solid $gray;
   .title__section {
     text-align: center;
     padding: 2rem 0;
+    h1 {
+      font-weight: normal;
+    }
   }
   .top__list-section {
     
@@ -98,8 +171,8 @@
    .top__list {
     // text-align: center;
     margin-bottom: 2rem;
-    background: $black;
-    color: $gray;
+    background: $white;
+    color: $black;
     text-decoration: none;
     font-size: 16px;
     gap: 16px;
@@ -109,9 +182,10 @@
     // justify-content: space-between;
     width: 100%;
     border-radius: 20px 2px 30px 4px;
+    box-shadow: 4px 4px 9px rgb(80 80 80 / 15%), -4px -4px 9px rgb(95 95 95 / 16%);
     transition: background 200ms ease-in;
     &:hover {
-      background: lighten($black, 15%);
+      background: darken($white, 15%);
     }
     img {
       height: 75px;
@@ -125,12 +199,27 @@
   
 }
 
+.empty__list {
+  background-color: $white;
+  display: inline-block;
+  width: 100%;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    font-weight: normal;
+  }
+}
 
 .header {
-  height: 200px;
+  height: 175px;
   justify-content: center;
   align-items: center;
   display: flex;
+  // background-color: royalblue;
+  box-shadow: 4px 4px 9px rgb(80 80 80 / 15%), -4px -4px 9px rgb(95 95 95 / 16%);
   width: 100%;
   .title {
     span {

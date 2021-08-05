@@ -1,5 +1,5 @@
 const TopAnime = (props: any) => {
-  console.log('TOP ANIME ++', props);
+  // console.log('TOP ANIME ++', props);
   return (
     <a 
       href={props.anime.url} 
